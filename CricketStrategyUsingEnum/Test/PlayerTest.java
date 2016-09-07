@@ -8,7 +8,6 @@ import static org.junit.Assert.assertEquals;
  */
 public class PlayerTest {
 
-
     Player t20MatchPlayer = null;
     Player testMatchPlayer = null;
     Player oneDayMatchPlayer = null;
@@ -41,5 +40,4 @@ public class PlayerTest {
         oneDayMatchPlayer.setPlayingStrategy(PlayingStrategy.T20_STYLE);
         assertEquals(oneDayMatchPlayer.play(),"Playing offensively");
     }
-
 }

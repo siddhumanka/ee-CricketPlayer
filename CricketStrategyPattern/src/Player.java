@@ -8,30 +8,30 @@ public class Player {
     private double netRunRate;
     private int totalRuns;
 
-    public Player(PlayingStrategy playingStrategy, String name, double netRunRate, int totalRuns){
+    public Player(PlayingStrategy playingStrategy, String name, double netRunRate, int totalRuns) {
         this.playingStrategy = playingStrategy;
         this.name = name;
         this.netRunRate = netRunRate;
         this.totalRuns = totalRuns;
     }
 
-    public  void setPlayingStrategy(PlayingStrategy playingStrategy){
+    public void setPlayingStrategy(PlayingStrategy playingStrategy) {
         this.playingStrategy = playingStrategy;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 
-    public double getNetRunRate(){
+    public double getNetRunRate() {
         return this.netRunRate;
     }
 
-    public int getTotalRuns(){
+    public int getTotalRuns() {
         return this.totalRuns;
     }
 
-    public void setTotalRuns(int newTotalRuns){
+    public void setTotalRuns(int newTotalRuns) {
         this.totalRuns = newTotalRuns;
         changeNetRunRate();
     }
@@ -40,7 +40,7 @@ public class Player {
         this.netRunRate = this.totalRuns / 100;
     }
 
-    public String play(){
+    public String play() {
         return playingStrategy.play();
     }
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CricketStrategyPattern/CricketStrategyPattern.iml" filepath="$PROJECT_DIR$/CricketStrategyPattern/CricketStrategyPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CricketStrategyUsingEnum/CricketStrategyUsingEnum.iml" filepath="$PROJECT_DIR$/CricketStrategyUsingEnum/CricketStrategyUsingEnum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ee-CricketPlayer.iml" filepath="$PROJECT_DIR$/ee-CricketPlayer.iml" />
+    </modules>
+  </component>
+</project>

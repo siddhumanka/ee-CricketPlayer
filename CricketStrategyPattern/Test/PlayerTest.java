@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 /**
  * Created by user-2 on 7/9/16.
@@ -38,6 +39,7 @@ public class PlayerTest {
     public void itShouldReturnTheStyleOfOneDayMatchPlayerAfterChangingTheStyle() throws Exception {
         oneDayMatchPlayer.setPlayingStrategy(new T20MatchStyle());
         assertEquals(oneDayMatchPlayer.play(),"Playing offensively");
+        assertNotEquals(oneDayMatchPlayer.play(),"Playing both offensively and defensively");
     }
 
 

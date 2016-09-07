@@ -3,20 +3,20 @@
  */
 public class Player {
 
-    private Strategy strategy;
+    private PlayingStrategy playingStrategy;
     private String name;
     private double netRunRate;
     private int totalRuns;
 
-    public Player(Strategy  strategy, String name, double netRunRate, int totalRuns){
-        this.strategy = strategy;
+    public Player(PlayingStrategy playingStrategy, String name, double netRunRate, int totalRuns){
+        this.playingStrategy = playingStrategy;
         this.name = name;
         this.netRunRate = netRunRate;
         this.totalRuns = totalRuns;
     }
 
-    public  void setStrategy(Strategy strategy){
-        this.strategy = strategy;
+    public  void setPlayingStrategy(PlayingStrategy playingStrategy){
+        this.playingStrategy = playingStrategy;
     }
 
     public String getName(){
@@ -41,7 +41,7 @@ public class Player {
     }
 
     public String play(){
-        return strategy.play();
+        return playingStrategy.play();
     }
 
 }

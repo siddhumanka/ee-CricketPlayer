@@ -1,7 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by user-2 on 7/9/16.
@@ -9,23 +9,36 @@ import static org.junit.Assert.*;
 public class PlayerTest {
 
 
-    Player t20Player = null;
-    Player testPlayer = null;
-    Player oneDayPlayer = null;
+    Player t20MatchPlayer = null;
+    Player testMatchPlayer = null;
+    Player oneDayMatchPlayer = null;
     @Before
     public void setUp() throws Exception {
-        t20Player = new Player(new OffensiveStrategy());
-        testPlayer = new Player(new DefensiveStrategy());
-        oneDayPlayer = new Player(new OffensiveDefensiveStrategy());
+        t20MatchPlayer = new Player(new T20MatchStyle(),"Rahul Sharma",89.89d,7000);
+        testMatchPlayer = new Player(new TestMatchStyle(),"Cheteshwar Pujara",27.89d,2000);
+        oneDayMatchPlayer = new Player(new OneDayMatchStyle(),"Mahendra Singh Dhoni",90.000d,13000);
     }
 
     @Test
-    public void play() throws Exception {
-        System.out.println(t20Player.play());
-        System.out.println(testPlayer.play());
-        System.out.println(oneDayPlayer.play());
-        t20Player.setStrategy(new OffensiveDefensiveStrategy());
-        System.out.println(t20Player.play());
+    public void itShouldReturnTheStyleOfT20MatchPlayer() throws Exception {
+        assertEquals(t20MatchPlayer.play(),"Playing offensively");
+
     }
+    @Test
+    public void itShouldReturnTheStyleOfTestMatchPlayer() throws Exception {
+        assertEquals(testMatchPlayer.play(),"Playing defensively");
+    }
+    @Test
+    public void itShouldReturnTheStyleOfOneDayMatchPlayer() throws Exception {
+        assertEquals(oneDayMatchPlayer.play(),"Playing both offensively and defensively");
+    }
+
+
+    @Test
+    public void itShouldReturnTheStyleOfOneDayMatchPlayerAfterChangingTheStyle() throws Exception {
+        oneDayMatchPlayer.setPlayingStrategy(new T20MatchStyle());
+        assertEquals(oneDayMatchPlayer.play(),"Playing offensively");
+    }
+
 
 }
